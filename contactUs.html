@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="manugupta" >
+    <title>SCS Group | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #050b1a;
+            color: white;
+        }
+
+        /* HERO CONTACT SECTION */
+        .contact-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+            background: linear-gradient(to right, #030712 60%, rgba(3, 7, 18, 0.6)),
+                url('https://images.unsplash.com/photo-1556157382-97eda2d62296') no-repeat right center/cover;
+        }
+
+        /* LEFT CONTENT */
+        .contact-left {
+            width: 55%;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .contact-left small {
+            letter-spacing: 3px;
+            color: #9ca3af;
+        }
+
+        .contact-left h1 {
+            font-size: 42px;
+            margin: 20px 0;
+        }
+
+        .contact-left p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* FORM STYLE */
+        .form-group {
+            margin-bottom: 35px;
+        }
+        .droupDown{
+            color: #030712;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 30px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #555;
+            padding: 10px 5px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-bottom: 1px solid #3b82f6;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* CHECKBOX */
+        .checkbox-group {
+            margin-top: 20px;
+        }
+
+        .checkbox-group label {
+            font-size: 10px;
+            color: #cbd5e1;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* BUTTON */
+        button {
+            margin-top: 30px;
+            padding: 14px 40px;
+            border-radius: 40px;
+            border: none;
+            background: linear-gradient(135deg, #2563eb, #1e3a8a);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px) {
+            .contact-section {
+                flex-direction: column;
+                background: linear-gradient(to bottom, #030712, #111827);
+            }
+
+            .contact-left {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="contact-section">
+
+        <div class="contact-left">
+            <small>REQUEST FOR SERVICES</small>
+            <h1>Let’s Build Something Together</h1>
+            <p>
+                We drive growth and purposeful transformation across industries.
+                Tell us about your business needs, and our team at SCS Group
+                will connect with you shortly.
+            </p>
+
+            <form>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Last Name*" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Organization*" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Region*</option>
+                        <option  class="droupDown">India</option>
+                        <option class="droupDown">Asia</option>
+                        <option class="droupDown">Europe</option>
+                        <option class="droupDown">USA</option>
+                        <option class="droupDown">Russia</option>
+                        <option class="droupDown">Japan</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group droupDown">
+                    <select required>
+                        <option value="">Select Industry*</option>
+                        <option class="droupDown">Digital Marketing</option>
+                        <option class="droupDown">Loan Service</option>
+                        <option class="droupDown">Insurance</option>
+                        <option class="droupDown">Education Consultant</option>
+                        <option class="droupDown">Legal Service</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea rows="4" placeholder="How can we help you?*" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" required>
+                        I consent to processing of my personal data.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        I would like to receive updates about products and services.
+                    </label>
+                </div>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
